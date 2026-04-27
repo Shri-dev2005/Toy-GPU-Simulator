@@ -1,0 +1,15 @@
+.entry vector_add
+.reg .s32 %r1;
+.reg .s32 %r2;
+.reg .s32 %r3;
+.reg .pred %p0;
+
+entry:
+  mov %r1, 1;
+  mov %r2, 2;
+  add %r3, %r1, %r2;
+  @%p0 bra done;
+  mul %r3, %r3, 4;
+
+done:
+  ret;
